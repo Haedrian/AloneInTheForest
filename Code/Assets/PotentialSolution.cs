@@ -21,6 +21,8 @@ namespace AssemblyCSharp
 
 		public void GenerateRandom()
 		{
+			UnityEngine.Random.seed = DateTime.UtcNow.Millisecond * DateTime.UtcNow.Second;
+
 			KeyCodes = new List<KeyCode> ();
 
 			for (int i=0; i < 700; i++)
